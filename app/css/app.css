@@ -1,0 +1,207 @@
+body.home {
+  background-color: #030;
+  background-image: url('../img/bg-home.jpg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  color: #fff;
+}
+
+.bg-full {
+  position: absolute;
+   top: 0;
+   left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.commonship {
+  text-align: center;
+}
+.newsletter .content,
+.commonship .content {
+  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 1px solid #000;
+  border-radius: 10px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.6);
+  margin: 0 auto;
+  padding: 12px;
+  text-align: center;
+  max-width: 600px;
+}
+.commonship .content {
+  margin-top: 24px;
+  padding-bottom: 24px;
+}
+.commonship h1 {
+  font-size: 3em;
+  margin-top: 0;
+}
+.commonship h2 {
+  font-size: 2em;
+  margin-bottom: 2em;
+}
+
+/* Newsletter Signup */
+.newsletter{
+  clear:left;
+  margin-top: 48px;
+  text-align: center;
+}
+.newsletter label {
+  display: block;
+  margin: 0 auto;
+}
+.newsletter input.text-input {
+  display: block;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  color: #333;
+  margin: 12px auto 18px auto;
+  width: 80%;
+}
+
+
+/* Splash page */
+.splash .start-liturgy {
+  display: none;
+}
+.splash .commonship h2 {
+  margin-bottom: 1em;
+}
+
+/* Liturgy */
+body.liturgy {
+  background-color: #408431;
+  color: #fff;
+}
+body.wednesday.liturgy,
+body.thursday.liturgy,
+body.friday.liturgy {
+  background-size: 100% auto;
+}
+body.sunday.liturgy { background-image: url('../img/bg-sunday.jpg'); }
+body.monday.liturgy { background-image: url('../img/bg-monday.jpg'); }
+body.tuesday.liturgy { background-image: url('../img/bg-tuesday.jpg'); }
+body.wednesday.liturgy { background-image: url('../img/bg-wednesday.jpg'); }
+body.thursday.liturgy { background-image: url('../img/bg-thursday.jpg'); }
+body.friday.liturgy { background-image: url('../img/bg-friday.jpg'); }
+body.saturday.liturgy { background-image: url('../img/bg-saturday.jpg'); }
+
+.liturgy .book {
+  margin: 2em 0;
+}
+.liturgy .intro .content,
+.liturgy .book .sheet {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  color: #222;
+  margin: 0 auto;
+  padding: 12px;
+  text-align: center;
+  max-width: 600px;
+}
+  .liturgy .previous,
+  .liturgy .next {
+    color: #fff;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 3.5em;
+    line-height: 1em;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 999;
+  }
+  .liturgy .previous:hover,
+  .liturgy .next:hover {
+    color: rgba(255, 255, 255, 0.95);
+  }
+  .liturgy .previous { top: 2px; }
+  .liturgy .next { bottom: 2px; }
+
+  .liturgy .previous i,
+  .liturgy .next i {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    line-height: 0.75em;
+    padding: 0 40px;
+  }
+  .liturgy .previous:hover i,
+  .liturgy .next:hover i {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+.liturgy .book {
+  margin-top: 4em;
+  margin-bottom: 4em;
+}
+
+
+.liturgy .book .sheet {
+  min-height: 50%;
+}
+.wednesday.liturgy .book .sheet { border: 1px solid #300; }
+  
+.liturgy .book .sheet {
+  opacity: 0;
+  
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;  
+}
+.liturgy .book .sheet.active {
+  opacity: 1;
+  
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;  
+}
+
+  .liturgy .book .sheet p {
+    font-size: 1.3em;
+    margin: 3px 0;
+    text-align: left;
+  }
+  .liturgy .book .sheet .stanza p {
+    padding-left: 24px;
+    text-indent: -24px;
+  }
+  .liturgy .book .sheet p.attribution {
+    font-style: italic;
+    text-align: right;
+  }
+  
+  .liturgy .book .sheet h3 { font-size: 3em; }
+  .liturgy .book p.contemplation {
+    font-size: 2em;
+    text-align: center;
+  }
+  
+  .liturgy .book .contemplation-image img {
+    max-width: 100%;
+  }
+
+  .liturgy .book .biblio ul {
+    list-style-type: square;
+    text-align: left;
+  }
+  .liturgy .book .biblio li {
+    margin-bottom: 18px;
+  }
+
+/* */
+.home .book,
+.home .nav,
+.liturgy .commonship,
+.liturgy .newsletter,
+.liturgy .sheets {
+  display:none;
+}
+
+.monday.liturgy .monday.sheets { display: block; }
+.tuesday.liturgy .tuesday.sheets { display: block; }
+.wednesday.liturgy .wednesday.sheets { display: block; }
+.thursday.liturgy .thursday.sheets { display: block; }
+.friday.liturgy .friday.sheets { display: block; }
+.saturday.liturgy .saturday.sheets { display: block; }
+.sunday.liturgy .sunday.sheets { display: block; }

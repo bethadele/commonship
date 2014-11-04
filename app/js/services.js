@@ -1,0 +1,2 @@
+angular.module('commonship.services', [])
+.constant('version', '0.0.1');

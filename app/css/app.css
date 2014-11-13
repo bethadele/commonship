@@ -91,7 +91,7 @@ body.saturday.liturgy { background-image: url('../img/bg-saturday.jpg'); }
 .liturgy .intro .content,
 .liturgy .book .sheet {
   background-color: #fff;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   color: #222;
   margin: 0 auto;
@@ -101,6 +101,7 @@ body.saturday.liturgy { background-image: url('../img/bg-saturday.jpg'); }
 }
   .liturgy .book .sheet {
     position: relative;
+    padding-bottom: 48px;
   }
   .liturgy .previous,
   .liturgy .next {
@@ -194,9 +195,28 @@ body.saturday.liturgy { background-image: url('../img/bg-saturday.jpg'); }
      bottom: 18px;
      right: 18px;
   }
-  .liturgy .sheet.contemplation .next-button {
-    display:none;
-  }
+  
+.timer-start-message,
+.timer-pause-message {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 2px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  padding: 24px;
+  position: absolute;
+   left: 10%;
+   top: 48px;
+  width: 80%;
+}
+.timer-start-message { z-index: 950; }
+.timer-pause-message { z-index: 960; }
+.fade {
+  opacity: 0;
+  
+  transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+}
 
 /* */
 .home .book,

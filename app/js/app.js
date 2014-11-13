@@ -95,7 +95,8 @@ var app = {
     ];
   
     app.today.dayNum = d.getDay();
-    app.today.dayNum = 1;
+    // FOR FORCING DATE IN DEV:
+    app.today.dayNum = 6;
     
     app.today.dayOfWeek = weekday[app.today.dayNum];
     app.today.day = d.getDate();
@@ -108,11 +109,12 @@ var app = {
     $('.liturgy-description').html(liturgyDescriptions[app.today.dayNum]);
 
     $('body').addClass(app.today.dayOfWeek.toLowerCase());
-    
-    // day = day.toLowerCase();
-    // if (day == 'wednesday' || day == 'thursday' || day == 'friday') {
-      // $('.liturgy').prepend('<img src="img/bg-' + day + '.jpg" class="bg-full" />');
-    // }
+    $('.liturgy .sheet').append('<a href="#next" class="btn btn-default next-button">Next Page</a>');
+    $('.next-button').click(function (evt) {
+      evt.preventDefault();
+      
+      app.goToNextSheet();
+    });
   },
   goToSheet: function (sheetNum) {
     $('.liturgy .previous').show();
@@ -136,12 +138,14 @@ var app = {
     if ($('.liturgy .book .sheet' + app.liturgy.currentSheet + ' .contemplation-image').length
       && !$('.liturgy .book .sheet' + app.liturgy.currentSheet + ' .contemplation-image img').length)
     {
-      $('.liturgy .book .sheet' + app.liturgy.currentSheet + ' .contemplation-image').html('<img src="img/' + app.today.dayOfWeek.toLowerCase() + '.jpg" alt="Contemplation Image" />');
+      $('.liturgy .book .sheet' + app.liturgy.currentSheet + ' .contemplation-image').html('<img src="img/' + app.today.dayOfWeek.toLowerCase() + '.jpg?1113" alt="Contemplation Image" />');
       $('.liturgy .book .sheet' + app.liturgy.currentSheet + '.contemplation h3').delay(10000).hide('slow');
       $('.liturgy .book .sheet' + app.liturgy.currentSheet + '.contemplation p').delay(10000).hide('slow');
+      $('.nav .next').hide();
     } else {
-      $('.liturgy .book .contemplation h3').show();
-      $('.liturgy .book .contemplation p').show();
+      $('.liturgy .book .' + app.today.dayOfWeek.toLowerCase() + ' .contemplation h3').show();
+      $('.liturgy .book .' + app.today.dayOfWeek.toLowerCase() + '.contemplation p').show();
+      $('.nav .next').show();
     }
   },
   goToPreviousSheet: function () {
